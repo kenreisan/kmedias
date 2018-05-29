@@ -16,7 +16,20 @@ Falta optimizarlo y mejorar el codigo que esta muy feo.
 import math
 import numpy as np
 
-def test():
+def kmedia():
+	"""Algoritmo de agrupamiento k-medias.
+
+	Agrupa los puntos dependiendo del centroide mas cercano.
+	Datos:	a = matriz de puntos.
+			m1= matriz de medias (centroides).
+			d = matriz vacia donde se almacenan las distancias de
+				cada pto. a cada centroide.
+			g = lista con los grupos creados.
+
+	Tanto <m2> como <gn> se utilizan para el recalculo de medias y
+	la nueva lista de grupos de puntos.
+	"""
+
 	a = np.matrix('1,1;2,1;4,3;5,4')
 	m1 = np.matrix('1,1;2,1')
 	d = np.matrix('0.0,0.0,0.0,0.0 ; 0.0,0.0,0.0,0.0')
@@ -66,6 +79,15 @@ def test():
 			gn = [[],[]]
 
 def distancia(d,a,m1,g):
+	"""Calcula la dist. eclidiana de cada pto. a cada centroide.
+
+	Recibe: d = matriz vacia donde se almacenaran las dist.
+			a = matriz de puntos a agrupar.
+			m1= matriz de las medias.
+			g = tupla donde se agrupan los puntos.
+
+	Devuelve: Lista con los puntos agrupados a cada centroide.
+	"""
 
 	for i in range(0,np.shape(d)[0]):
 		for j in range(0,np.shape(d)[1]):
@@ -79,5 +101,6 @@ def distancia(d,a,m1,g):
 			g[1].append([a[x,0],a[x,1]])
 	return g
 
+
 if __name__ == '__main__':
-	test()
+	kmedia()
