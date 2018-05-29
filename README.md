@@ -9,4 +9,4 @@ Todos los datos estan en las funciones, como dije es un codigo
 muy feo, pero es posible arreglarlo y hacer que pueda recibir
 los datos desde archivos y que no tenga un limite en K. 
 
-Actualmente el solo funciona con matrices de dimension 2.
+Actualmente solo funciona con matrices de dimension 2.
