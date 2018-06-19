@@ -1,4 +1,5 @@
 # K-medias (K-means)
+Última versión : 19/jun/2018
 
 Programa de agrupamiento, es un programa para la escuela. 
 
